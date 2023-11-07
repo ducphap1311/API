@@ -21,7 +21,7 @@ app.use('/api/v3', authenticateUser, orderRouter)
 app.use(notFound)
 app.use(errorHandlerFunction)
 
-const port = 5000 || process.env.port
+const port = 5000
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI)
