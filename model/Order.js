@@ -26,11 +26,6 @@ const orderSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: 'User',
             required: [true, 'please provide user']
-        },
-        productId: {
-            type: mongoose.Types.ObjectId,
-            ref: 'Product',
-            required: [true, 'please provide product id']
         }
     },
     { timestamps: true }

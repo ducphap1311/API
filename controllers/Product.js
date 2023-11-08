@@ -22,6 +22,11 @@ const getProducts = async (req, res) => {
             products = products.sort(sortList)
         }
 
+        // const page = req.query.page || 1
+        // const limit = req.query.limit || 9
+        // const skip = (page - 1) * limit
+        // products = products.skip(skip).limit(limit)
+
         products = await products
         res.status(200).json({products, nbits: products.length})
         
